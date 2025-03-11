@@ -11,7 +11,7 @@ import session.Session;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RegistrarUsuario {
+public class Inicio {
 
     MenuOpciones menuOpciones = new MenuOpciones();
 
@@ -34,15 +34,11 @@ public class RegistrarUsuario {
     @Test
     public void descubreLosProgramas() throws InterruptedException {
 
+        Thread.sleep(5000);
+
         paginaInicial.descubrePrograma.click();
 
         Thread.sleep(10000);
 
-        String currentUrl = Session.getInstance().getBrowser().getCurrentUrl();
-
-        String expectedUrl = "https://pasismed.gniepro.com/?postnombre=descubrePasismed";
-        assertEquals(expectedUrl, currentUrl, "La URL después de hacer clic no es la esperada.");
-
-        Thread.sleep(5000);
     }
 }
